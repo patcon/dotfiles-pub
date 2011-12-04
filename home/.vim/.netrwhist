@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/homebase/vagrant-chef-repo/cookbooks-sources'
+let g:netrw_dirhist_2='/Users/homebase/vagrant-chef-repo/cookbooks-sources/newrelic'
+let g:netrw_dirhist_3='/Users/homebase/.ssh'
+let g:netrw_dirhist_4='/Users/homebase/new-chef-repo/config'
+let g:netrw_dirhist_5='/Users/homebase/new-chef-repo/cookbooks-overrides'
