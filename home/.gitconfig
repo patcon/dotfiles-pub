@@ -13,9 +13,9 @@
 	ci = commit
 	co = checkout
 	di = diff
-	diw = diff -w
+	diw = diff --ignore-all-space
 	dc = diff --cached
-	dcw = diff --cached -w
+	dcw = diff --cached --ignore-all-space
 	amend = commit --amend
 	aa = add --all
 	head = !git l -1
@@ -31,6 +31,7 @@
 	gnc = goodness --cached
 	fa = fetch --all
 	pom = push origin master
+	flow = !gitflow
 
 [format]
 	pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
