@@ -24,14 +24,10 @@ ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vagrant)
+plugins=(github)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin
-
-alias vim='mvim -v'
 export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
@@ -39,16 +35,20 @@ alias duh='du -csh'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
-[[ -s "/Users/homebase/.rvm/scripts/rvm" ]] && source "/Users/homebase/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
 # Remove specific ZSH autocorrects
 alias cookbook='nocorrect cookbook'
 alias environment='nocorrect environment'
 alias role='nocorrect role'
 alias spark='nocorrect spark'
+alias vagrant='nocorrect vagrant'
 
 alias wrangle='open -a textwrangler'
 
 # Sets github credentials as environment variables
-alias git=hub
 source ~/.github
+
+alias jira='python /usr/share/jira-cli/jira --server=http://myplanet.jira.com'
+alias diff=colordiff
+alias vim='mvim -v'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
