@@ -1,1 +1,3 @@
-.vim/.netrwhist
+# Ignore vim as Janus updates the full dir.
+.vim/
+.vimrc
