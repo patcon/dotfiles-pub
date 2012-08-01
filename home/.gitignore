@@ -1,3 +1,6 @@
 # Ignore vim as Janus updates the full dir.
 .vim/
 .vimrc
+
+# NEVER commit.
+.github
