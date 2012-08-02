@@ -44,11 +44,9 @@ alias vagrant='nocorrect vagrant'
 
 alias wrangle='open -a textwrangler'
 
-# Sets github credentials as environment variables
-source ~/.github
-
 alias jira='python /usr/share/jira-cli/jira --server=http://myplanet.jira.com'
 alias diff=colordiff
 alias vim='mvim -v'
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
