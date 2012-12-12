@@ -4,9 +4,14 @@
 
 [core]
 	quotepath = false
+	excludesfile = /Users/homebase/.gitignore_global
 
 [color]
 	ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
 
 [alias]
 	st = status
@@ -32,8 +37,23 @@
 	fa = fetch --all
 	pom = push origin master
 	flow = !gitflow
+	br = branch
+	sta = stash
+	llog = log --date=local
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 
 [format]
 	pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 [github]
 	user = patcon
+[apply]
+	whitespace = nowarn
+[branch]
+	autosetupmerge = true
