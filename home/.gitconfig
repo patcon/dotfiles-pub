@@ -14,7 +14,7 @@
 	status = auto
 
 [alias]
-	st = status
+	st = status --porcelain
 	ci = commit
 	co = checkout
 	di = diff
@@ -57,3 +57,5 @@
 	whitespace = nowarn
 [branch]
 	autosetupmerge = true
+[push]
+	default = simple
