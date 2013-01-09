@@ -5,6 +5,7 @@
 [core]
 	quotepath = false
 	excludesfile = /Users/homebase/.gitignore_global
+  editor = vim
 
 [color]
 	ui = auto
