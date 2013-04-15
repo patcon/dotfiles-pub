@@ -54,3 +54,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 # Credentials
 [[ -s "$HOME/.rackspace_myplanet" ]] && source "$HOME/.rackspace_myplanet"
+[[ -s "$HOME/.aws_patcon" ]] && source "$HOME/.aws_patcon"
