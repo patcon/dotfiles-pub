@@ -50,7 +50,7 @@ alias vim='mvim -v'
 
 # rbenv
 export RBENV_ROOT=/usr/local/opt/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 # Credentials
 [[ -s "$HOME/.rackspace_myplanet" ]] && source "$HOME/.rackspace_myplanet"
