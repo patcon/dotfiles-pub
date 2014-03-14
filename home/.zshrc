@@ -55,7 +55,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 [[ -s "$HOME/.rackspace_myplanet" ]] && source "$HOME/.rackspace_myplanet"
 [[ -s "$HOME/.aws_patcon" ]] && source "$HOME/.aws_patcon"
 
-alias td="todo.sh -d $HOME/.todo.cfg"
+alias td="todo.sh -t -d $HOME/.todo.cfg"
 
 # key bindings
 xmodmap .xmodmaprc
