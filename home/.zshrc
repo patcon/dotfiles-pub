@@ -34,6 +34,8 @@ alias ll='ls -lG'
 alias duh='du -csh'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
+alias ls='ls --color'
+alias diff=colordiff
 
 # Remove specific ZSH autocorrects
 alias cookbook='nocorrect cookbook'
@@ -42,12 +44,6 @@ alias role='nocorrect role'
 alias spark='nocorrect spark'
 alias vagrant='nocorrect vagrant'
 
-alias wrangle='open -a textwrangler'
-
-alias jira='python /usr/share/jira-cli/jira --server=http://myplanet.jira.com'
-alias diff=colordiff
-alias vim='mvim -v'
-
 # rbenv
 export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
@@ -55,3 +51,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 # Credentials
 [[ -s "$HOME/.rackspace_myplanet" ]] && source "$HOME/.rackspace_myplanet"
 [[ -s "$HOME/.aws_patcon" ]] && source "$HOME/.aws_patcon"
+
+alias td="todo.sh -d $HOME/.todo.cfg"
+
+# key bindings
+xmodmap .xmodmaprc
