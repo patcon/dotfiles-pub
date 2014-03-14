@@ -56,3 +56,6 @@ alias td="todo.sh -d $HOME/.todo.cfg"
 
 # key bindings
 xmodmap .xmodmaprc
+
+# Load key into ssh-agent if not loaded
+ssh-add -L | grep $USER 1>/dev/null || ssh-add
