@@ -37,6 +37,9 @@ export GREP_OPTIONS="--color"
 alias ls='ls --color'
 alias diff=colordiff
 
+# Sort dotfiles first with ls
+export LC_COLLATE="C"
+
 # Remove specific ZSH autocorrects
 alias cookbook='nocorrect cookbook'
 alias environment='nocorrect environment'
