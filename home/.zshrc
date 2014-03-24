@@ -57,8 +57,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
-# key bindings
-xmodmap .xmodmaprc
-
 # Load key into ssh-agent if not loaded
 ssh-add -L | grep $USER 1>/dev/null || ssh-add
