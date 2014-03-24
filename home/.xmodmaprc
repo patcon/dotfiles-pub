@@ -1,2 +1,13 @@
+! Fix X1 Carbon keyboard putting Esc where tilde should live
+keycode 9 = Escape asciitilde Escape
+
+! Kill the pgup/down buttons that are easy to hit
 keycode 112 = 0x0000
 keycode 117 = 0x0000
+
+! Switch the Del key to Backspace, as easy to hit
+keycode 119 = BackSpace Delete
+
+! Trying to map Windows key as mod key
+keycode 133 = Super_L
+add mod4 = Super_L
