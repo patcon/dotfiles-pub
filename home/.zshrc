@@ -59,3 +59,10 @@ alias td="todo.sh -t -d $HOME/.todo.cfg"
 
 # Load key into ssh-agent if not loaded
 ssh-add -L | grep $USER 1>/dev/null || ssh-add
+
+# added by travis gem
+[ -f /home/patcon/.travis/travis.sh ] && source /home/patcon/.travis/travis.sh
+
+# CLI copy-paste
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
