@@ -1,1 +1,4 @@
 set clipboard=unnamed
+
+" gittip/aspen customizations
+au BufRead,BufNewFile *.spt set filetype=markdown
