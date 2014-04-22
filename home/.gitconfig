@@ -60,3 +60,5 @@
   whitespace = nowarn
 [branch]
   autosetupmerge = true
+[heroku]
+	account = personal
