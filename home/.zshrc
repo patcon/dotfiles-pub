@@ -72,3 +72,17 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Force color (for instance, for ghi tool):
 export TERM=xterm-256color
+
+### Set up per-user npm packages (rather than global)
+
+# NPM packages in homedir
+NPM_PACKAGES="$HOME/.npm-packages"
+
+# Tell our environment about user-installed node tools
+PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# Tell Node about these packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
