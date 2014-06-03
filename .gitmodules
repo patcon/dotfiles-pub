@@ -1,0 +1,3 @@
+[submodule "home/.janus/surround"]
+	path = home/.janus/surround
+	url = git://github.com/tpope/vim-surround.git
