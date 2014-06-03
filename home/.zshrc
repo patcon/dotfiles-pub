@@ -56,6 +56,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 # Credentials
 [[ -s "$HOME/.rackspace_myplanet" ]] && source "$HOME/.rackspace_myplanet"
 [[ -s "$HOME/.aws_patcon" ]] && source "$HOME/.aws_patcon"
+[[ -s "$HOME/.ghi_patcon" ]] && source "$HOME/.ghi_patcon"
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
@@ -68,3 +69,6 @@ ssh-add -L | grep $USER 1>/dev/null || ssh-add
 # CLI copy-paste
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# Force color (for instance, for ghi tool):
+export TERM=xterm-256color
