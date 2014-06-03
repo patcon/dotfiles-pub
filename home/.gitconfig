@@ -6,6 +6,7 @@
   quotepath = false
   excludesfile = /Users/homebase/.gitignore_global
   editor = vim
+  autocrlf = input
 
 [color]
   ui = auto
