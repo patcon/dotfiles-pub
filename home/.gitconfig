@@ -54,6 +54,7 @@
   graft = !legit graft \"$@\"
 
 [format]
+  # Disabled for fdroidserver
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 [github]
   user = patcon
@@ -63,3 +64,7 @@
   autosetupmerge = true
 [heroku]
 	account = personal
+[merge]
+	tool = meld
+[review "review.cyanogenmod.org"]
+	username = patcon

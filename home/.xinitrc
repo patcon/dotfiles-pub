@@ -1,2 +1,2 @@
 # key bindings
-xmodmap .xmodmaprc
+xmodmap $HOME/.xmodmaprc

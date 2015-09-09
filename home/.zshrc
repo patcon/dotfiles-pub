@@ -26,7 +26,7 @@ ZSH_THEME="muse"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(github)
+plugins=(git github rails)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,20 +47,19 @@ alias cookbook='nocorrect cookbook'
 alias environment='nocorrect environment'
 alias role='nocorrect role'
 alias spark='nocorrect spark'
-alias vagrant='nocorrect vagrant'
-
-# rbenv
-export RBENV_ROOT=/usr/local/opt/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
+#alias vagrant='nocorrect vagrant'
 
 # Credentials
 [[ -s "$HOME/.rackspace_myplanet" ]] && source "$HOME/.rackspace_myplanet"
 [[ -s "$HOME/.aws_patcon" ]] && source "$HOME/.aws_patcon"
 [[ -s "$HOME/.ghi_patcon" ]] && source "$HOME/.ghi_patcon"
+[[ -s "$HOME/.credentials_digitalocean" ]] && source "$HOME/.credentials_digitalocean"
+[[ -s "$HOME/.credentials_digitalocean_blendive" ]] && source "$HOME/.credentials_digitalocean_blendive"
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
 # Load key into ssh-agent if not loaded
+# NOTE: Doesn't work anymore
 ssh-add -L | grep $USER 1>/dev/null || ssh-add
 
 # added by travis gem
@@ -86,3 +85,50 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Tell Node about these packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+# rbenv
+
+export RBENV_ROOT="${HOME}/.rbenv"
+
+if [ -d "${RBENV_ROOT}" ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+  eval "$(rbenv init -)"
+fi
+
+# Better mapping for opening dirs
+alias open="gnome-open"
+
+ #AndroidDev PATH
+
+export PATH=${PATH}:$HOME/android/sdk/tools
+
+export PATH=${PATH}:$HOME/android/sdk/platform-tools
+
+# cp with progress bar
+# https://bbs.archlinux.org/viewtopic.php?pid=937445#p937445
+alias cp_p='rysnc --recursive --progress'
+
+# Alias to start tor browser
+alias tor=/home/patcon/tor-browser/start-tor-browser
+
+# Android development
+export NDK_BASE=$HOME/android-ndk-r9d
+export ANDROID_HOME=$HOME/android/sdk
+
+# Add node-webkit to PATH
+if [ -d "$HOME/opt/node-webkit" ]; then
+    PATH="$PATH:$HOME/opt/node-webkit"
+fi
+
+alias git-ls='git ls-tree --full-name --name-only HEAD | while read filename; do echo $(git log -1 --format=%ar -- ${filename##*/})\\t$filename; done'
+
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+
+source $HOME/.xinitrc
+
+# Make sure ChefDK bin dir ahead of rbenv bin dir.
+# See: https://github.com/berkshelf/vagrant-berkshelf/issues/212#issuecomment-50654257
+export PATH=/opt/chefdk/bin:$PATH
+
+export EDITOR=vim

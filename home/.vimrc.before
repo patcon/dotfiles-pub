@@ -2,3 +2,9 @@ set clipboard=unnamed
 
 " gittip/aspen customizations
 au BufRead,BufNewFile *.spt set filetype=python
+
+" Use bash as fish isn't compat.
+" See: https://github.com/carlhuda/janus/issues/533#issuecomment-19564483
+if $SHELL == "/usr/bin/fish"
+  set shell=/bin/bash
+endif
