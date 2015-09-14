@@ -132,3 +132,6 @@ source $HOME/.xinitrc
 export PATH=/opt/chefdk/bin:$PATH
 
 export EDITOR=vim
+
+# Always run .profile
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
