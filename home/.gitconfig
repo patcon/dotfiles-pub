@@ -68,3 +68,5 @@
 	tool = meld
 [review "review.cyanogenmod.org"]
 	username = patcon
+[rerere]
+	enabled = true
