@@ -113,7 +113,7 @@ alias cp_p='rysnc --recursive --progress'
 alias tor=/home/patcon/tor-browser/start-tor-browser
 
 # Android development
-export NDK_BASE=$HOME/android-ndk-r9d
+export NDK_BASE=$HOME/android/ndk/android-ndk-r10
 export ANDROID_HOME=$HOME/android/sdk
 
 # Add node-webkit to PATH
