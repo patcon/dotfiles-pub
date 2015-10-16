@@ -130,7 +130,7 @@ source $HOME/.xinitrc
 
 # Make sure ChefDK bin dir ahead of rbenv bin dir.
 # See: https://github.com/berkshelf/vagrant-berkshelf/issues/212#issuecomment-50654257
-export PATH=/opt/chefdk/bin:$PATH
+export PATH=/opt/chefdk/bin:/home/patcon/.chefdk/gem/ruby/2.1.0/bin:$PATH
 
 export EDITOR=vim
 
