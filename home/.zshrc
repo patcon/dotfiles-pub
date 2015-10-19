@@ -10,6 +10,9 @@ ZSH_THEME="steeef"
 # - fishy: compacts parent dir names
 # - fox: newline for actual commands
 
+# Set a specific theme when on local computer, to avoid confusion
+[[ "$(hostname)" == "patcon-thinkpad" ]] && ZSH_THEME="muse"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
