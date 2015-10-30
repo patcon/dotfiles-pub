@@ -139,3 +139,6 @@ export EDITOR=vim
 
 # Always run .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
+
+# OPAM configuration
+. /home/patcon/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
