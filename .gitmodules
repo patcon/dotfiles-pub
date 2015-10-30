@@ -4,3 +4,6 @@
 [submodule "home/.janus/editorconfig"]
 	path = home/.janus/editorconfig
 	url = git://github.com/editorconfig/editorconfig-vim.git
+[submodule "home/.janus/solidity"]
+	path = home/.janus/solidity
+	url = https://github.com/tomlion/vim-solidity.git
