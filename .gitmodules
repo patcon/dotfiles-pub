@@ -7,3 +7,6 @@
 [submodule "home/.janus/solidity"]
 	path = home/.janus/solidity
 	url = https://github.com/tomlion/vim-solidity.git
+[submodule "home/.oh-my-zsh"]
+	path = home/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
