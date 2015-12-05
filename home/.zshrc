@@ -142,3 +142,5 @@ export EDITOR=vim
 
 # OPAM configuration
 . /home/patcon/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+source ~/.nvm/nvm.sh
