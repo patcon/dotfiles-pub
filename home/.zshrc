@@ -30,7 +30,13 @@ ZSH_THEME="steeef"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails)
+plugins=(
+  bundler
+  git
+  rails
+  )
+# github plugin disabled.
+# See: https://github.com/robbyrussell/oh-my-zsh/issues/4670
 
 source $ZSH/oh-my-zsh.sh
 
