@@ -33,6 +33,7 @@ ZSH_THEME="steeef"
 plugins=(
   bundler
   git
+  nvm
   rails
   )
 # github plugin disabled.
