@@ -33,10 +33,11 @@ ZSH_THEME="steeef"
 plugins=(
   bundler
   git
+  github
   nvm
   rails
   )
-# github plugin disabled.
+# github plugin broken after commit dfe10af
 # See: https://github.com/robbyrussell/oh-my-zsh/issues/4670
 
 source $ZSH/oh-my-zsh.sh
