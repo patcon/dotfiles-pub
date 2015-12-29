@@ -19,10 +19,10 @@
   st = status --porcelain
   ci = commit
   co = checkout
-  di = diff
-  diw = diff --ignore-all-space
-  dc = diff --cached
-  dcw = diff --cached --ignore-all-space
+  di = diff --find-renames
+  diw = di --ignore-all-space
+  dc = di --cached
+  dcw = dc --ignore-all-space
   amend = commit --amend
   aa = add --all
   head = !git l -1
