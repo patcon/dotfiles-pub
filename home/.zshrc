@@ -155,3 +155,10 @@ source ~/.nvm/nvm.sh
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+func ckbkit () {
+  name=$1
+  print $name
+  source_url=$(curl -s https://supermarket.chef.io/api/v1/cookbooks/$name | jq --raw-output .source_url)
+  firefox --new-tab "${source_url}#readme"
+}
