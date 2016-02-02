@@ -21,7 +21,7 @@
   co = checkout
   di = diff --find-renames
   diw = di --ignore-all-space
-  dc = di --cached
+  dc = diff --find-renames --cached
   dcw = dc --ignore-all-space
   amend = commit --amend
   aa = add --all
@@ -70,3 +70,11 @@
 	username = patcon
 [rerere]
 	enabled = true
+
+# See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=813157
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckobjects = true
