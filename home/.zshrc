@@ -78,8 +78,10 @@ ssh-add -L | grep $USER 1>/dev/null || ssh-add
 [ -f /home/patcon/.travis/travis.sh ] && source /home/patcon/.travis/travis.sh
 
 # CLI copy-paste
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+if [ "$(uname -s)" != "Darwin" ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
 
 # Force color (for instance, for ghi tool):
 export TERM=xterm-256color
