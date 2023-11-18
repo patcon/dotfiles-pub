@@ -1,3 +1,6 @@
+[init]
+  defaultBranch = main
+
 [user]
   name = Patrick Connolly
   email = patrick.c.connolly@gmail.com
@@ -16,6 +19,9 @@
   interactive = auto
   status = auto
 
+[grep]
+  lineNumber = true
+
 [alias]
   st = status --porcelain
   ci = commit
@@ -33,6 +39,7 @@
   ff = merge --ff-only
   pullff = pull --ff-only
   l = log --graph --abbrev-commit --date=relative
+  lnm = !git l --no-merges
   la = !git l --all
   div = divergence
   gn = goodness
@@ -79,3 +86,5 @@
 	fsckobjects = true
 [receive]
 	fsckobjects = true
+[hub]
+	protocol = ssh

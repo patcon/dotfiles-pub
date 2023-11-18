@@ -28,17 +28,16 @@ ZSH_THEME="steeef"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+export ZSH_PYENV_QUIET=true
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  bundler
-  git
+  gitfast
   github
   nvm
-  rails
+  pyenv
   )
-# github plugin broken after commit dfe10af
-# See: https://github.com/robbyrussell/oh-my-zsh/issues/4670
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,7 +47,6 @@ alias ll='ls -lG'
 alias duh='du -csh'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
-alias ls='ls --color'
 alias diff=colordiff
 
 # Sort dotfiles first with ls
@@ -67,6 +65,7 @@ alias spark='nocorrect spark'
 [[ -s "$HOME/.ghi_patcon" ]] && source "$HOME/.ghi_patcon"
 [[ -s "$HOME/.credentials_digitalocean" ]] && source "$HOME/.credentials_digitalocean"
 [[ -s "$HOME/.credentials_digitalocean_blendive" ]] && source "$HOME/.credentials_digitalocean_blendive"
+[[ -s "$HOME/.zsh_secrets" ]] && source "$HOME/.zsh_secrets"
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
@@ -102,15 +101,17 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # rbenv
 
-export RBENV_ROOT="${HOME}/.rbenv"
+export RBENV_ROOT="$HOME/.rbenv"
 
-if [ -d "${RBENV_ROOT}" ]; then
-  export PATH="${RBENV_ROOT}/bin:${PATH}"
+if [ -d "$RBENV_ROOT" ]; then
+  export PATH="$RBENV_ROOT/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
 # Better mapping for opening dirs
-alias open="gnome-open"
+if [ "$(uname -s)" != "Darwin" ]; then
+  alias open="gnome-open"
+fi
 
  #AndroidDev PATH
 
@@ -153,14 +154,25 @@ export EDITOR=vim
 # OPAM configuration
 . /home/patcon/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-source ~/.nvm/nvm.sh
-
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
 func ckbkit () {
   name=$1
   print $name
   source_url=$(curl -s https://supermarket.chef.io/api/v1/cookbooks/$name | jq --raw-output .source_url)
   firefox --new-tab "${source_url}#readme"
 }
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
+#eval "$(pyenv init -)"
+
+alias vim=nvim
+
+source /usr/local/share/zsh/site-functions
+
+# Prevent homebrew from running auto-update when installing other pages.
+export HOMEBREW_NO_AUTO_UPDATE=1
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=/Users/patcon/.local/bin:$PATH
