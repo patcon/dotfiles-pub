@@ -128,7 +128,7 @@ alias tor=/home/patcon/tor-browser/start-tor-browser
 
 # Android development
 export NDK_BASE=$HOME/android/ndk/android-ndk-r10
-export ANDROID_HOME=$HOME/android/sdk
+export ANDROID_HOME=/usr/local/share/android-sdk
 
 # Add node-webkit to PATH
 if [ -d "$HOME/opt/node-webkit" ]; then
@@ -176,3 +176,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=/Users/patcon/.local/bin:$PATH
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
