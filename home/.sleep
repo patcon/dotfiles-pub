@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# See: https://github.com/fishman/sleepwatcher
+# Requires `brew install sleepwatcher`
+
+# Disable bluetooth on system sleep.
+# Requires `brew install blueutil`
+/usr/local/bin/blueutil --power off

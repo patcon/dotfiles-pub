@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# See: https://github.com/fishman/sleepwatcher
+# Requires `brew install sleepwatcher`
+
+# Enable bluetooth on system wakeup.
+# Requires `brew install blueutil`
+/usr/local/bin/blueutil --power on
