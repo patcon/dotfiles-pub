@@ -1,9 +1,9 @@
 [submodule "home/.janus/surround"]
 	path = home/.janus/surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "home/.janus/editorconfig"]
 	path = home/.janus/editorconfig
-	url = git://github.com/editorconfig/editorconfig-vim.git
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "home/.janus/solidity"]
 	path = home/.janus/solidity
 	url = https://github.com/tomlion/vim-solidity.git
