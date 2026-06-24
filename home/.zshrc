@@ -167,7 +167,7 @@ func ckbkit () {
 
 #eval "$(pyenv init -)"
 
-alias vim=nvim
+command -v nvim &>/dev/null && alias vim=nvim
 
 source /usr/local/share/zsh/site-functions
 
