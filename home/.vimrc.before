@@ -1,4 +1,4 @@
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 
 " gittip/aspen customizations
 au BufRead,BufNewFile *.spt set filetype=python
