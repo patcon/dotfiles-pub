@@ -66,6 +66,7 @@ alias spark='nocorrect spark'
 [[ -s "$HOME/.credentials_digitalocean" ]] && source "$HOME/.credentials_digitalocean"
 [[ -s "$HOME/.credentials_digitalocean_blendive" ]] && source "$HOME/.credentials_digitalocean_blendive"
 [[ -s "$HOME/.zsh_secrets" ]] && source "$HOME/.zsh_secrets"
+[[ -s "$HOME/.credentials" ]] && source "$HOME/.credentials"
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
