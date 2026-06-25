@@ -178,3 +178,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH=/Users/patcon/.local/bin:$PATH
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+
+source $HOME/.bashrc.d/ssh-start-dir.sh
