@@ -70,10 +70,6 @@ alias spark='nocorrect spark'
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
-# Load key into ssh-agent if not loaded
-# NOTE: Doesn't work anymore
-ssh-add -L | grep $USER 1>/dev/null || ssh-add
-
 # added by travis gem
 [ -f /home/patcon/.travis/travis.sh ] && source /home/patcon/.travis/travis.sh
 
@@ -181,3 +177,5 @@ export PATH=/Users/patcon/.local/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
 
 source $HOME/.bashrc.d/ssh-start-dir.sh
+
+[ -f ~/repos/ansible-workstation-patcon/support/common/ssh-agent.bash ] && . ~/repos/ansible-workstation-patcon/support/common/ssh-agent.bash
