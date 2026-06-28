@@ -137,7 +137,7 @@ alias git-ls='git ls-tree --full-name --name-only HEAD | while read filename; do
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 
-source $HOME/.xinitrc
+[[ -n "$DISPLAY" ]] && source $HOME/.xinitrc
 
 # Make sure ChefDK bin dir ahead of rbenv bin dir.
 # See: https://github.com/berkshelf/vagrant-berkshelf/issues/212#issuecomment-50654257
