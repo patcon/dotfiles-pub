@@ -67,6 +67,8 @@ alias spark='nocorrect spark'
 [[ -s "$HOME/.credentials_digitalocean_blendive" ]] && source "$HOME/.credentials_digitalocean_blendive"
 [[ -s "$HOME/.zsh_secrets" ]] && source "$HOME/.zsh_secrets"
 [[ -s "$HOME/.credentials" ]] && source "$HOME/.credentials"
+#[[ -s "$HOME/.credentials_claude" ]] && source "$HOME/.credentials_claude"
+[[ -s "$HOME/.credentials_pypi" ]] && source "$HOME/.credentials_pypi"
 
 alias td="todo.sh -t -d $HOME/.todo.cfg"
 
@@ -174,8 +176,33 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 export PATH=/Users/patcon/.local/bin:$PATH
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
-
 source $HOME/.bashrc.d/ssh-start-dir.sh
 
 [ -f ~/repos/ansible-workstation-patcon/support/common/ssh-agent.bash ] && . ~/repos/ansible-workstation-patcon/support/common/ssh-agent.bash
+
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# For PyPI python packages
+# See: https://docs.astral.sh/uv/configuration/environment/#uv_publish_token
+# See ~/.credentials_pypi
+export PATH="/usr/local/sbin:$PATH"
+
+# Claude Code alternate account
+# When ready: create ~/.claude-alt, then run `claude-alt` to authenticate second account
+# Setup guide: https://gist.github.com/KMJ-007/0979814968722051620461ab2aa01bf2
+claude-alt() {
+  if [[ ! -d "$HOME/.claude-alt" ]]; then
+    echo ""
+    echo "  claude-alt: second account not yet configured."
+    echo ""
+    echo "  To set up:"
+    echo "    1. mkdir ~/.claude-alt"
+    echo "    2. Run \`claude-alt\` again to authenticate your second account"
+    echo ""
+    echo "  Full guide: https://gist.github.com/KMJ-007/0979814968722051620461ab2aa01bf2"
+    echo ""
+    return 1
+  fi
+  CLAUDE_CONFIG_DIR="$HOME/.claude-alt" claude "$@"
+}
